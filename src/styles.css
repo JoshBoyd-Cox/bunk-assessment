@@ -1,0 +1,17 @@
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.weatherReport h1{
+    text-align: center;
+}
+
+.quiz h2{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.football {
+    text-align: center;
+    background-image: url('../src/assets/images/pitch.jpg');
+}

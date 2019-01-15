@@ -1,0 +1,66 @@
+<div class="weatherReport">
+  <h1>Weather Report</h1>
+  
+  <div class="row">
+    <div class="card bg-light col-sm-4">
+      <img class="card-img-top" src="/src/assets/images/london.jpg" alt="Rhino">
+      <div class="card-body">
+        <h5 class="card-title">{{(london|async)?.name}}</h5>
+        <p>In {{(london|async)?.name}} the temperature is {{(london|async)?.main.temp}}C, with a humidity of {{(london|async)?.main.humidity}}%. The expected high temperature is {{(london|async)?.main.temp_max}}C and a low of {{(london|async)?.main.temp_min}}C</p>
+        
+      </div>
+    </div>
+    
+    <div class="card bg-light col-sm-4" >
+      <img class="card-img-top" src="/src/assets/images/bristol.jpg" alt="Rhino">
+      <div class="card-body">
+        <h5 class="card-title">{{(bristol|async)?.name}}</h5>
+        <p>In {{(bristol|async)?.name}} the temperature is {{(bristol|async)?.main.temp}}C, with a humidity of {{(bristol|async)?.main.humidity}}%. The expected high temperature is {{(bristol|async)?.main.temp_max}}C and a low of {{(bristol|async)?.main.temp_min}}C</p>
+        
+      </div>
+    </div>
+    
+    <div class="card bg-light col-sm-4" >
+      <img class="card-img-top" src="/src/assets/images/rome.jpg" alt="Rhino">
+      <div class="card-body">
+        <h5 class="card-title">{{(rome|async)?.name}}</h5>
+        <p>In {{(rome|async)?.name}} the temperature is {{(rome|async)?.main.temp}}C, with a humidity of {{(rome|async)?.main.humidity}}%. The expected high temperature is {{(rome|async)?.main.temp_max}}C and a low of {{(rome|async)?.main.temp_min}}C</p>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="quiz">
+  <h2>Can you answer this question?</h2>
+  
+  <div class="form-group">
+    <form ngForm="quiz" #quiz="ngForm">
+    <label for="math">What is 2+2?</label>
+    <input
+    ngModel
+    type="number"
+    class="form-control"
+    id="quiz"
+    placeholder="What is 2+2?"
+    name="math"
+    #math="ngModel"
+    >
+    <button class="btn btn-success" (click)="submitAnswer(math.value)">submit</button>
+
+    <div *ngIf="answer === true">Nice one, nerd!</div>
+    <div *ngIf="answer === false">Nah, that's not it</div>
+    
+    </form>
+  </div>
+  
+</div>
+
+<div class="football">
+  <h2>Pick out your ultimate Borussia Monchengladbach 11</h2>
+</div>
+<app-football></app-football>
+
+
+

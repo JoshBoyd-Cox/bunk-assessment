@@ -1,0 +1,5 @@
+<ul *ngFor="let footballer of footballers">
+  <li>{{footballer.name}}, {{footballer.position}}</li>
+  <button (click)="josh(footballer.name, footballer.position)">add to team</button>
+  <li>--------</li>
+</ul>
